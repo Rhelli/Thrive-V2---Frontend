@@ -7,10 +7,10 @@ const LoginContainer = () => {
 
   return (
     <div>
-      <button onClick={() => loginWithRedirect({ screen_hint: 'signup' })}>Sign Up</button>
+      <button type="button" onClick={() => loginWithRedirect({ screen_hint: 'signup' })}>Sign Up</button>
       <LoginButton />
     </div>
-  )
+  );
 };
 
 export default LoginContainer;

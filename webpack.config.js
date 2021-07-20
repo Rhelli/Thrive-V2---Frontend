@@ -8,17 +8,17 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     chunkFilename: '[id].js',
-    publicPath: ''
+    publicPath: '',
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
@@ -29,22 +29,22 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
-                localIdentName: "[name]__[local]___[hash:base64:5]",
+                localIdentName: '[name]__[local]___[hash:base64:5]',
               },
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
           {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
                 plugins: [
-                  ['autoprefixer', {},],
+                  ['autoprefixer', {}],
                 ],
               },
-            }
-          }
-        ]
+            },
+          },
+        ],
       },
       {
         test: /\.s[ac]ss$/i,
@@ -74,9 +74,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: __dirname + '/src/index.html',
+      template: `${__dirname}/src/index.html`,
       filename: 'index.html',
-      inject: 'body'
-    })
-  ]
+      inject: 'body',
+    }),
+  ],
 };
