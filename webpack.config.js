@@ -1,6 +1,8 @@
 const path = require('path');
+// eslint-disable-next-line no-unused-vars
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const sass = require('sass');
 
 module.exports = {
   entry: './src/index.js',
@@ -16,7 +18,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
       },
@@ -54,7 +56,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              implementation: require('sass'),
+              implementation: sass,
             },
           },
         ],

@@ -4,10 +4,9 @@ import AuthNavbar from '../AuthNavbar/AuthNavbar';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => (
-  <div>
+  <div className={style.Navbar}>
     <nav>
       <div>
-        <div className={styles.navbarBrand} />
         <MainNavbar />
         <AuthNavbar />
       </div>
