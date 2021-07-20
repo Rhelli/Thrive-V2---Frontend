@@ -1,14 +1,11 @@
+import App from './App';
+import { Auth0Provider } from '@auth0/auth0-react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = () => (
-  <div>
-    <h1>Welcome To Thrive</h1>
-    <button>Login</button>
-  </div>
-);
-
 ReactDOM.render(
-  <App />,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 );
