@@ -6,6 +6,7 @@ const Navbar = () => (
   <div>
     <nav>
       <div>
+        <h1>Navbar</h1>
         <MainNavbar />
         <AuthNavbar />
       </div>
@@ -13,4 +14,4 @@ const Navbar = () => (
   </div>
 );
 
-export default Navbar; 
+export default Navbar;

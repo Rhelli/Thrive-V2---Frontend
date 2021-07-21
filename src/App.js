@@ -7,7 +7,6 @@ const App = () => (
   <BrowserRouter>
     <Auth0ProviderWithHistory>
       <Navbar />
-      <App />
     </Auth0ProviderWithHistory>
   </BrowserRouter>
 );
