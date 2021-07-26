@@ -20,6 +20,7 @@ const ExternalApiTest = () => {
       setUsers(responseData.users);
     } catch (err) {
       setUsers(err.message);
+      console.log(err.message);
     }
   };
 
